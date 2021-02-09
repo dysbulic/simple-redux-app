@@ -21,7 +21,7 @@ const ShowImpl = ({ page }) => {
 const Show = connect(page => ({ page }))(ShowImpl)
 
 const Next = () => (
-  <button onClick={pageSlice.actions.nextPage}>+</button>
+  <button onClick={() => store.dispatch(pageSlice.actions.nextPage()) }>+</button>
 )
 
 export default () => (
